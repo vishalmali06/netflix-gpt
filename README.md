@@ -3,8 +3,19 @@
 - Create Reat App
 - Configure Tailwind CSS
 - Header
+- Routing of App
 - Login Form
 - Sign Up Form
+- Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploying are app to Production
+- Create SignUp User Account
+- Implemente Sign In user API
+- Created Redux store with userSlice
+- Implemented Sign Out
+- Update Profile API Call
+-
 
 # Features
 
