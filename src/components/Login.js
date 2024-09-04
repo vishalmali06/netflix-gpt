@@ -3,15 +3,14 @@ import Header from './Header'
 import checkValidData from '../utils/validate'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { LOGO } from '../utils/constatnt';
 
 const Login = () => {
 
     const [isSignForm, setIsSignForm] = useState(true);
     const [errorMessage, setErrorMessage] = useState('');
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const name = useRef(null);
@@ -42,7 +41,6 @@ const Login = () => {
                                 photoURL: photoURL
                             }
                             ));
-                        navigate("/browse");
                     }).catch((error) => {
                         setErrorMessage(error.message);
                     });
@@ -57,8 +55,6 @@ const Login = () => {
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log(user);
-                    navigate("/browse");
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -72,7 +68,7 @@ const Login = () => {
         <div>
             <Header />
             <div className='absolute'>
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/19fc1a4c-82db-4481-ad08-3a1dffbb8c39/IN-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_24a485f6-1820-42be-9b60-1b066f1eb869_large.jpg"
+                <img src={LOGO}
                     alt="bg" />
             </div>
             <form onSubmit={(e) => e.preventDefault()} className='absolute w-3/12 p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80'>
