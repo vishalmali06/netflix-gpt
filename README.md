@@ -20,6 +20,15 @@
 - Unsubscribed to the OnAuthStateChange callback
 - Add harcoded values to the constant file
 - Regiter TMDB API & create an app & get the access tokGet Data from TMDB now Playing Movie list API
+- Get Data from TMDB now playing movies list API
+- Custom Hook for Now Playing Movies
+- Created movieSlice
+- Update Store with movies Data 
+- Planning for main container & secondary container
+- Fetch data for trailer video
+- Update store with trailer video data 
+- Embaded the Youtube video and make it auto play and mute
+- Tailwind classes to make main container look ossam
 
 # Features
 
