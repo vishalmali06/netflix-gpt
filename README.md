@@ -34,6 +34,8 @@
 - Build Movie Card
 - TMDB Image CDN URL
 - usePopularMovies Custom hook 
+- GPT search feature
+
 
 # Features
 

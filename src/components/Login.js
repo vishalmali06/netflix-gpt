@@ -1,16 +1,15 @@
-import React, { useRef, useState } from "react";
-import Header from "./Header";
-import checkValidData from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { auth } from "../utils/firebase";
+import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { BG_URL, USER_AVATAR } from "../utils/constatnt";
+import { auth } from "../utils/firebase";
 import { addUser } from "../utils/userSlice";
-import { LOGO } from "../utils/constatnt";
-import { USER_AVATAR } from "../utils/constatnt";
+import checkValidData from "../utils/validate";
+import Header from "./Header";
 
 const Login = () => {
   const [isSignForm, setIsSignForm] = useState(true);
@@ -82,7 +81,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={LOGO} alt="bg" />
+        <img src={BG_URL} alt="bg" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
